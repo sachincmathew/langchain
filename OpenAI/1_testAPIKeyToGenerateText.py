@@ -1,9 +1,14 @@
 import configparser
+import os
 from openai import OpenAI
+
+# Determine the absolute path to the config file
+script_dir = os.path.dirname(__file__)
+config_path = os.path.join(script_dir, 'config.properties')
 
 # Read the API key from the property file
 config = configparser.ConfigParser()
-config.read('config.properties')
+config.read(config_path)
 api_key = config.get('DEFAULT', 'api_key')
 
 client = OpenAI(
@@ -18,4 +23,4 @@ completion = client.chat.completions.create(
   ]
 )
 
-print(completion.choices[0].message);
+print(completion.choices[0].message)
