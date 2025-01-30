@@ -51,6 +51,13 @@ def get_weather(city):
 # weather_data = get_weather(city)
 # print(weather_data)
 
+def create_chat_completion(messages):
+    return client.chat.completions.create(
+        messages=messages,
+        model="gpt-3.5-turbo", 
+        functions=[weatherFunctionSpec]
+    )
+
 messages = [
   {"role": "system", "content": "You give short answers to my questions."},
   {"role": "user", "content": "Is it raining in singapore? Whats the temperature?"}
@@ -60,11 +67,7 @@ print("--------------------- FIRST -----------------------")
 print(messages)
 
 
-response = client.chat.completions.create(
-  model="gpt-4o-mini",
-  messages=messages,
-  functions=[weatherFunctionSpec],
-)
+response = create_chat_completion(messages)
 
 responseMessages = response.choices[0].message
 print("Got response: ", responseMessages)
@@ -90,11 +93,7 @@ if responseMessages.function_call:
         messages.append({"role": "function", "name":"weather", "content": json.dumps(weather)})
         print("--------------------- SECOND -----------------------")
         print(messages)
-        response = client.chat.completions.create(
-          model="gpt-4o-mini",
-          messages=messages,
-          functions=[weatherFunctionSpec],
-        )
+        response = create_chat_completion(messages)
 
         responseMessages = response.choices[0].message
         print("Got response: ", responseMessages)
@@ -102,6 +101,3 @@ if responseMessages.function_call:
         
         print("--------------------- OUTPUT -----------------------")
         print("Got response: ", responseMessages.content)
-
-
-
