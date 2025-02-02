@@ -42,8 +42,8 @@ def main():
     # Create embeddings
     print("\n--- Creating embeddings ---")
     embeddings = OpenAIEmbeddings(
-        model="text-embedding-3-small"
-    )  # Update to a valid embedding model if needed
+        model="text-embedding-3-small"  # Update to a valid embedding model if needed
+    )
     print("\n--- Finished creating embeddings ---")
 
     # Create the vector store and persist it automatically
