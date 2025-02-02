@@ -7,9 +7,7 @@ from langchain_openai import OpenAIEmbeddings
 
 # Define the directory containing the text file and the persistent directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
-#file_path = os.path.join(current_dir, "books", "odyssey.txt")
-persistent_directory = os.path.join(current_dir, "db", "chroma_db")
-file_path = "D:\\GIT\\langchain\\4_rag\\books\\_test.txt"
+file_path = os.path.join(current_dir, "books", "odyssey.txt")
 
 # Ensure the text file exists
 if not os.path.exists(file_path):
@@ -32,7 +30,9 @@ docs = text_splitter.split_documents(documents)
 # Display information about the split documents
 print("\n--- Document Chunks Information ---")
 print(f"Number of document chunks: {len(docs)}")
+print(f"==================================")
 print(f"Sample chunk:\n{docs[0].page_content}\n")
+print(f"==================================")
 
 # Create embeddings
 print("\n--- Creating embeddings ---")
