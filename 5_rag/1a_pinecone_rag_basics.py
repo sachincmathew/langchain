@@ -48,7 +48,7 @@ def main():
 
     # Create the vector store and persist it automatically
     print("\n--- Creating vector store ---")
-    index_name = "default"
+    index_name = "books-rag-demo"
     db = PineconeVectorStore.from_documents(
         text_chunks, embeddings, index_name=index_name)
     print("\n--- Finished creating vector store ---")

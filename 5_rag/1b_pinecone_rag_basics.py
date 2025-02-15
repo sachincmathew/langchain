@@ -7,7 +7,7 @@ from langchain_openai import OpenAIEmbeddings
 embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
 
 # Load the existing vector store with the embedding function
-index_name = "default"
+index_name = "books-rag-demo"
 db = PineconeVectorStore(index_name=index_name, embedding=embeddings)
 
 # Define the user's question
