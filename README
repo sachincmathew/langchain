@@ -16,6 +16,13 @@ graph LR;
     C --> D[Retrieve from Vector DB];
     D --> E[Send to GAI Model];
 ```
+<div class="mermaid">
+graph LR
+    A[Read Text] --> B[Split into Chunks]
+    B --> C[Store in Vector DB]
+    C --> D[Retrieve from Vector DB]
+    D --> E[Send to GAI Model]
+</div>
 
 ### Input Sources
 - Text files
