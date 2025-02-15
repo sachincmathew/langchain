@@ -10,11 +10,11 @@ Personal learning repository for LangChain examples and demonstrations.
 ## Overall Process Flow
 
 ```mermaid
-flowchart LR
-    A[Read Text] --> B[Split into Chunks]
-    B --> C[Store in Vector DB]
-    C --> D[Retrieve from Vector DB]
-    D --> E[Send to GAI Model]
+graph LR;
+    A[Read Text] --> B[Split into Chunks];
+    B --> C[Store in Vector DB];
+    C --> D[Retrieve from Vector DB];
+    D --> E[Send to GAI Model];
 ```
 
 ### Input Sources
