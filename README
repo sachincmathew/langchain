@@ -1,11 +1,42 @@
 # LangChain Learning Demos
-
 Personal learning repository for LangChain examples and demonstrations.
 
 ## Learning Resources
-
 - [Building AI Apps with LangChain](https://youtu.be/yF9kGESAi3M?feature=shared)
 - [LangChain Tutorial](https://youtu.be/i-oHvHejdsc?feature=shared)
+
+## Tech Used
+- LangChain - Python framework for building LLM applications
+- Vector Databases - For storing and retrieving text embeddings
+    - PineCone 
+    - AstraDB (single demo)
+- Text Splitters:
+    - CharacterTextSplitter
+    - RecursiveCharacterTextSplitter
+    - TokenTextSplitter
+- Embeddings:
+    - OpenAI Embeddings
+    - HuggingFace Embeddings
+- Retrievers:
+    - Similarity Search
+    - MMR (Maximal Marginal Relevance)
+    - Time-weighted Vector Store
+- Loading Tools:
+    - TextLoader - For processing text files
+    - WebBaseLoader - For loading web content
+    - FireCrawl - For web crawling
+- Large Language Models:
+    - OpenAI
+        - GPT-4
+        - GPT-3.5-turbo
+    - Anthropic
+        - Claude-3-Sonnet
+    - Google
+        - Gemini 2.0
+    - NVIDIA
+        - Mixtral 8x22B
+    - Groq
+        - Mixtral 8x7B
 
 ## Overall Process Flow
 
@@ -17,6 +48,12 @@ graph LR;
     D --> E[Send to GAI Model];
 ```
 
-### Input Sources
-- Text files
-- Web content
+A. Read Text
+    - Text files (TextLoader)
+    - Web content (WebBaseLoader, FireCrawl)
+
+B. Split into Chunks
+    - The chunking strategy plays an important role. #3 has different examples.
+
+C. Retrieve from Vector DB
+    - There are different retrieval strategies. #5 has different examples.
