@@ -54,5 +54,5 @@ A. Read Text
 B. Split into Chunks
     - The chunking strategy plays an important role. #3 has different examples.
 
-C. Retrieve from Vector DB
+D. Retrieve from Vector DB
     - There are different retrieval strategies. #5 has different examples.
