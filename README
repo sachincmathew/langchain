@@ -1,5 +1,22 @@
-Demo's for personal learning of LangChain.
+# LangChain Learning Demos
 
-Sources of demos:
-https://youtu.be/yF9kGESAi3M?feature=shared
-https://youtu.be/i-oHvHejdsc?feature=shared
+Personal learning repository for LangChain examples and demonstrations.
+
+## Learning Resources
+
+- [Building AI Apps with LangChain](https://youtu.be/yF9kGESAi3M?feature=shared)
+- [LangChain Tutorial](https://youtu.be/i-oHvHejdsc?feature=shared)
+
+## Overall Process Flow
+
+```mermaid
+graph LR
+    A[Read Text] --> B[Split into Chunks]
+    B --> C[Store in Vector DB]
+    C --> D[Retrieve from Vector DB]
+    D --> E[Send to GAI Model]
+```
+
+### Input Sources
+- Text files
+- Web content
