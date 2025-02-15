@@ -39,7 +39,6 @@ Personal learning repository for LangChain examples and demonstrations.
         - Mixtral 8x7B
 
 ## Overall Process Flow
-
 ```mermaid
 graph LR;
     A[Read Text] --> B[Split into Chunks];
