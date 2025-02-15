@@ -10,7 +10,7 @@ Personal learning repository for LangChain examples and demonstrations.
 ## Overall Process Flow
 
 ```mermaid
-graph LR
+flowchart LR
     A[Read Text] --> B[Split into Chunks]
     B --> C[Store in Vector DB]
     C --> D[Retrieve from Vector DB]
